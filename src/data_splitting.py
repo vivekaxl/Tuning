@@ -4,9 +4,7 @@ from random import shuffle, choice
 
 
 
-def split_data(filename):
-    data_folder = "./Data/"
-    data_file = data_folder + filename
+def split_data(data_file):
 
     df = pd.read_csv(data_file)
 
