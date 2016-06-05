@@ -46,7 +46,7 @@ def run_experiment(files):
         untuned_scores = []
         tuned_scores = []
 
-        for _ in xrange(10):
+        for _ in xrange(5):
             train, val, test = split_data(file)
             parameter = run_de_4_rf(train, val, de_parameters)
             untuned_scores.append(run_random_forest(train, test, untuned_parameter))
