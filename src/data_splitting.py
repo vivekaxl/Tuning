@@ -5,6 +5,7 @@ from random import shuffle, choice
 
 
 def split_data(data_file):
+    print ">>>> ", data_file
 
     df = pd.read_csv(data_file)
 

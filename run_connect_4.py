@@ -62,4 +62,4 @@ def run_experiment(files):
         fd.close()
 
 if __name__ == "__main__":
-    run_experiment("./norm_data/cleaned_connect-4.csv")
+    run_experiment(["./norm_data/connect-4.csv"])

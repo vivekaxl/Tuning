@@ -1,6 +1,6 @@
 from __future__ import division
 from random import randint, random, uniform
-form
+import sys
 
 
 def run_random_forest(train, test, parameter_list={"n_estimators":10, "min_samples_split":2, "min_samples_leaf":1, "max_leaf_nodes":None, "max_features":1}):
@@ -135,7 +135,9 @@ def run_de_4_rf(train, validation, de_parameters):
 
     while gen < de_parameters["max_generations"] and to_stop is False:
         # print [round(s, 3) for s in scores]
+
         print "# ",
+        sys.stdout.flush()
         change_in_population = False
         for pop_no, pop in enumerate(population):
             mutant = extrapolate(parameter_ranges, population, pop, de_parameters["F"], de_parameters["CF"])
